@@ -1,0 +1,117 @@
+@keyframes progressFill {
+    from {
+      stroke-dashoffset: 282.74;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
+    background: #000000;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .skillsGrid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .category {
+    flex: 1;
+    min-width: 320px;
+    text-align: center;
+    background: black; /* Column background black */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .categoryTitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .skillsList {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .skillItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  .skillItem:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .iconContainer {
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .skillName {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .circularProgress {
+    transform: rotate(-90deg);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .progressAnimation {
+    stroke-linecap: round;
+    animation: progressFill 1.5s ease-in-out forwards;
+  }
+  .skillsHeading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white; /* Adjust if needed */
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .skillsHeading:hover {
+    transform: rotate(360deg);
+  }
+  
+
+  

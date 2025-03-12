@@ -1,95 +1,149 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const router = useRouter();
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+  // Rotating roles with smooth transition
+  const roles = [
+    "Web Developer",
+    "ML Enthusiast",
+    "DSE Student at IIT Mandi",
+    "Intern at Reto India",
+  ];
+
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className={styles.container}>
+      {/* Main Section */}
+      <div className={styles.mainSection}>
+        <div className={styles.leftSection}>
+          <h1 className={styles.staticText}>
+            Hello, I am <span>Arpita Khobragade</span>
+          </h1>
+          <h2 className={styles.animatedText}>{roles[currentRoleIndex]}</h2>
+          <p className={styles.description}>
+            I am a passionate web developer and AI/ML enthusiast currently
+            pursuing Data Science and Engineering at IIT Mandi. I have
+            experience in full-stack development and machine learning.
+          </p>
+
+
+
+          {/* Download CV Button */}
+          <a href="/Resume_Internship.pdf" download className={styles.cvButton}>
+            Download CV
           </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+
+          {/* Social Links */}
+          <div className={styles.socialLinks}>
+            <a
+              href="https://www.linkedin.com/in/arpita-khobragade-06a121331"
+              target="_blank"
+              className={styles.icon}
+            >
+              <FaLinkedin size={30} />
+            </a>
+            <a
+              href="https://github.com/A08rpita"
+              target="_blank"
+              className={styles.icon}
+            >
+              <FaGithub size={30} />
+            </a>
+            <a
+              href="https://leetcode.com/u/A23rpita/"
+              target="_blank"
+              className={styles.icon}
+            >
+              <SiLeetcode size={30} />
+            </a>
+            <a
+              href="mailto:arpitakhobragade2308@gmail.com"
+              className={styles.icon}
+            >
+              <FaEnvelope size={30} />
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* Right Section - Profile Image */}
+        <div className={styles.rightSection}>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/profile.jpg"
+            alt="Profile Picture"
+            width={320}
+            height={320}
+            className={styles.profileImage}
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        </div>
+      </div>
+
+      {/* Achievements Section */}
+      <div className={styles.achievementSection}>
+        <h2 className={styles.sectionHeading}>Achievements</h2>
+        <ul className={styles.list}>
+          <li>Shortlisted for Smart India Hackathon (SIH).</li>
+          <li>Selected for Cyber For Her Hackathon - Phase 2.</li>
+          <li>Student Trainee at SheCodes.</li>
+        </ul>
+      </div>
+
+      {/* Projects Section */}
+      <div className={styles.projectsSection}>
+        <h2 className={styles.sectionHeading}>Projects</h2>
+        <p>Here are some of my key projects.</p>
+        <button
+          className={styles.viewButton}
+          onClick={() => router.push("/projects")}
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          View Projects
+        </button>
+      </div>
+
+      {/* Skills Section */}
+      <div className={styles.skillsSection}>
+        <h2 className={styles.sectionHeading}>Skills</h2>
+        <p>
+          I have experience with Full-Stack Development, Machine Learning, and
+          Data Science.
+        </p>
+        <button
+          className={styles.viewButton}
+          onClick={() => router.push("/skills")}
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          View Skills
+        </button>
+      </div>
+
+      {/* Work Experience Section */}
+      <div className={styles.workExperienceSection}>
+        <h2 className={styles.sectionHeading}>Work Experience</h2>
+        <p>
+          I have worked on AI-driven analytics, full-stack applications, and
+          frontend development.
+        </p>
+        <button
+          className={styles.viewButton}
+          onClick={() => router.push("/experience")}
+        >
+          View Experience
+        </button>
+      </div>
     </div>
   );
 }

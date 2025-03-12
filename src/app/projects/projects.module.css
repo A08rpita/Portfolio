@@ -1,0 +1,143 @@
+.projectsContainer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #121212; /* Dark theme background */
+    color: #ffffff; /* White text for general content */
+}
+
+/* Section Heading */
+.sectionHeading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Project Card */
+.projectCard {
+    background: #1e1e1e;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Hover Effect: Slight Brightness */
+.projectCard:hover {
+    transform: translateY(-8px);
+    background: #252525; /* Slightly lighter on hover */
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Project Title */
+.projectTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    position: relative;
+    display: inline-block;
+    cursor: pointer; /* Make it clickable */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change color on click */
+.projectTitle:active {
+    color: #00aaff;
+}
+
+/* Other Text */
+.projectDescription {
+    font-size: 1rem;
+    margin: 0.8rem 0;
+    color: #ffffff;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+/* Skill Icons */
+.skill {
+    font-size: 2rem;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.5));
+}
+
+/* Buttons Section */
+.projectLinks {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Button Styles */
+.button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* GitHub Button */
+.codeButton {
+    background-color: #24292e;
+    color: white;
+    border: 2px solid #24292e;
+}
+
+.codeButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(36, 41, 46, 0.5);
+}
+
+/* Live Demo Button */
+.demoButton {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.demoButton:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Icon Size */
+.icon {
+    font-size: 1.3rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

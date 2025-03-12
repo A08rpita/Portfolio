@@ -1,0 +1,146 @@
+/* Container */
+.container {
+    text-align: center;
+    padding: 40px;
+    max-width: 600px; /* Reduced Width */
+    margin: auto;
+}
+
+/* Heading (Static but with Animation) */
+.heading {
+    font-size: 2rem; /*SlightlySmaller*/
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards;
+    -webkit-animation: fadeIn 1s forwards;
+}
+
+/* Heading Hover Effect */
+.heading:hover {
+    color: #007bff; /* Changes Color on Hover */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Experience Card - Reduced Size */
+.experienceCard {
+    background: #222;
+    padding: 15px; /* Reduced Padding */
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+    width: 90%; /* Reduce overall width */
+    max-width: 500px; /* Ensures it doesn’t take full width */
+    margin: auto;
+    text-align: left; /* Align text properly */
+}
+
+/* Experience Card Hover */
+.experienceCard:hover {
+    transform: scale(1.02);
+}
+
+/* Row for Company, Date & Description */
+.row {
+    display: flex;
+    align-items: center;
+    font-size: 1rem; /* Smaller Font */
+    color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Icons for Date & Company */
+.icon {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate Icons on Hover */
+.icon:hover {
+    transform: rotate(15deg);
+}
+
+/* Work Description */
+.description {
+    font-size: 0.9rem; /* Smaller Text */
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* Skills Section */
+.skillHeading {
+    font-size: 1rem; /* Smaller Font */
+    color: #007bff;
+    margin-top: 10px;
+}
+
+/* Skills Icons */
+.skills {
+    display: flex;
+    justify-content: left;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Skill Icons Animation */
+.skillIcon {
+    font-size: 1.5rem; /* Smaller Icons */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 🔹 Skill Icons Hover Effect */
+.skillIcon:hover {
+    transform: scale(1.2); /* Slight Zoom Effect */
+}
+
+/* Skill Icon Colors */
+.js { color: #f7df1e; } /* JavaScript - Yellow */
+.react { color: #61dafb; } /* React - Light Blue */
+.node { color: #68a063; } /* Node.js - Green */
+.mongo { color: #4db33d; } /* MongoDB - Dark Green */
+
+/* 🔹 Skill Icon Color Change on Hover */
+.js:hover { color: #ffcc00; } /* Slightly Brighter Yellow */
+.react:hover { color: #00c3ff; } /* More Vibrant Blue */
+.node:hover { color: #50c878; } /* Lighter Green */
+.mongo:hover { color: #3fa043; } /* Slightly Brighter Green */
+
+/* Responsibilities List */
+.responsibilities {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* 🔹 Bullet Points (With Hover Effect) */
+.responsibilities li {
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* 🔹 Responsibilities Hover Effect */
+.responsibilities li:hover {
+    background-color: rgba(0, 123, 255, 0.3); /* Darker Blue Background */
+    transform: scale(1.05); /* Slight Zoom Effect */
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
