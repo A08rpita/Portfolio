@@ -24,7 +24,7 @@ const projects = [
       { icon: <SiPython />, name: "Python" },
       { icon: <SiFlask />, name: "Flask" },
     ],
-    github: "https://github.com/YOUR_GITHUB_LINK", // Replace with actual GitHub link
+    github: "https://github.com/A08rpita/CashBot", // Replace with actual GitHub link
   },
   {
     title: "WearNet –Styles Classification",
@@ -35,7 +35,7 @@ const projects = [
       { icon: <SiTensorflow />, name: "TensorFlow" },
       { icon: <SiKeras />, name: "Keras" },
     ],
-    github: "https://github.com/YOUR_GITHUB_LINK", // Replace with actual GitHub link
+    github: "https://github.com/A08rpita/WearNet", // Replace with actual GitHub link
   },
   {
     title: "Portfolio Website",
@@ -45,8 +45,8 @@ const projects = [
       { icon: <SiNextdotjs />, name: "Next.js" },
       { icon: <SiPython />, name: "JavaScript" }, // Replace Python with JS icon if needed
     ],
-    github: "https://github.com/YOUR_PORTFOLIO_GITHUB", // Replace with actual GitHub link
-    liveDemo: "https://YOUR_PORTFOLIO_LINK.vercel.app", // Replace with actual live link
+    github: "https://github.com/A08rpita/Portfolio", // Replace with actual GitHub link
+    liveDemo: "https://portfolio-a08rpitas-projects.vercel.app/", // Replace with actual live link
   },
 ];
 
