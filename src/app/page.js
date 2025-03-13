@@ -45,7 +45,7 @@ export default function Home() {
 
 
           {/* Download CV Button */}
-          <a href="/Resume_Internship.pdf" download className={styles.cvButton}>
+          <a href="/Arpita_Resume.pdf" download className={styles.cvButton}>
             Download CV
           </a>
 
