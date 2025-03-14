@@ -139,7 +139,7 @@ export default function Home() {
         </p>
         <button
           className={styles.viewButton}
-          onClick={() => router.push("/experience")}
+          onClick={() => router.push("/work-experience")}
         >
           View Experience
         </button>
